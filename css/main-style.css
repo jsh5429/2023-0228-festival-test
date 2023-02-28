@@ -1,1 +1,240 @@
-.header{}
+@font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HS-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1{
+    font-family: 'HS-Regular';
+}
+
+h3{
+    font-family: 'TAEBAEKmilkyway';
+    font-size: 1.3rem;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+section{
+    box-sizing: border-box;
+    margin: auto;
+}
+
+/*헤더(네비게이션을 포함한 상단 범위)*/
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: #2D3192cc;
+    z-index: 100;
+}
+
+/* 네비게이션 바 로고와 오시는 길, 문의사항이 들어가있다.*/
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 1000px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+/* 오시는 길, 문의사항 */
+.nav>.nav-menu{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'TAEBAEKmilkyway';
+    font-weight: bold;
+}
+
+.nav>.nav-menu a:hover{
+    color: yellow;
+    transition: all 0.2s;
+}
+
+.nav>.nav-menu a:hover:after{
+    content: "";
+    display: inline-block;
+    height: 4px;
+    width: 80px;
+    background-color: #FFFF08;
+    position: absolute;
+    margin-left: -74px;
+    bottom: 0;
+}
+
+/*로고*/
+.nav>a>.nav-title{
+    width: 140px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/*모바일 버튼. PC상태일때는 display:none*/
+.mobile-button{
+    width: 35px;
+    height: 40px;
+    display: none;
+}
+
+/*main*/
+
+/*main 상단 이미지와 행사 이름*/
+.main>.main-title{
+    background-image: url(../img/rose-g8968e0cab_1920.jpg);
+    background-position: center;
+    min-height: 400px;
+    height: 100vh;
+    text-align: right;
+    font-weight: bold;
+    font-size: 3rem;
+    padding: 400px 180px 0 0;
+    color: white;
+    text-shadow: black 0 2px 5px;
+    line-height: 40px;
+}
+
+/* main-descript */
+
+.main{}
+
+/* descript 부분 위치 정렬*/
+.main>.main-descript{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* descript 영문 제목 글자 크기 및 위치 조정*/
+.main>.main-descript h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* descript 설명 글자 크기 및 간격 조정*/
+.main>.main-descript h3{
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+/* descript 표 위치 조정*/
+.main-descript-table{
+    margin: auto;
+    margin-top: 50px;
+}
+/* descript 표 내부 간격 조정*/
+.main-descript-table td{
+    padding: 8px;
+}
+/* descript 표 디자인*/
+.main-descript-table tr td:first-child{
+    border-right: #2D3192cc 2px solid;
+    font-weight: bold;
+    color: #2D3192cc;
+}
+
+
+/* 시민 갤러리 */
+/* gallery-wrap */
+.gallery-title{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.gallery-wrap{
+    padding: 30px;
+}
+.gallery-wrap>.gallery-boards{
+    display: flex;
+    justify-content: center;
+}
+.gallery-wrap>.gallery-boards>.gallery-board{
+    
+    min-width: 300px;
+    height: 370px;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin: 5px;
+}
+.gallery-wrap>.gallery-boards>.gallery-board>.image-wrap{
+    width: 280px;
+    height: 300px;
+    overflow: hidden;
+    /*갤러리 보드 안에 사진 깔끔하게 정렬*/
+    margin: 10px;
+    
+}
+
+/* 갤러리 보드 안의 글자 위치 조정 */
+.gallery-wrap>.gallery-boards>.gallery-board>h2, p{
+    text-align: center;
+    margin: 5px;
+}
+
+.gallery-wrap>.gallery-boards>.gallery-board>h2{
+    font-weight: bold;
+}
+
+/* main-news */
+.main-news-wrap{
+    margin: auto;
+    padding: 30px;
+    height: 350px;
+}
+.main-news-title{
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.main-news-table{
+    margin: auto;
+    width: 80%;
+}
+
+.main-news-table tr{
+    border: solid 2px #2D3192cc;
+    border-left: none;
+    border-right: none;
+}
+
+.main-news-table td{
+    padding: 20px;
+}
+.main-news-table td a{
+    padding: 20px;
+    color: black;
+}
+
+/*테이블의 tr에 마우스를 올리면 
+td안의 글자와 td안의 a태그의 색이 변한다.*/
+.main-news-table tr:hover td,
+.main-news-table tr:hover td a
+{
+    color: #EB5D66;
+}
+
+
+.main-news-table td:first-child{
+    font-weight: bold;
+}
+
+/* footer */
+
